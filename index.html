@@ -41,26 +41,455 @@
 
         :root{
             font-family: 'Noto Sans KR', sans-serif;
+            font-size: 14px;
+            /* background-color: #000; */
+        }
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .sec-tit{
+            font-size: 2em;
+            color: #352461;
+        }
+        .ad{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;     
+
+            padding: 2px 6px;
+            background-color: #000;  
+            color: #fff;
+            opacity: 0.3;
+        }
+        .skip-menu a{
+            position: fixed;
+            left: 50%;
+            top: -100%;
+            z-index: 9999;
+            transform: translateX(-50%);
+
+            display: inline-block;
+            width: 200px;
+            padding: 10px;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            background-color: #352461;
+            color: #fff;
+            text-align: center;
+        }
+        .skip-menu a:focus{
+            top: 0%;
+        }
+
+        /* modal-popup */
+        .modal-popup{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 9998;
+            background-color: rgba(0,0,0,0.3);
+        }
+        .modal-container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+
+            width: 100%;
+            max-width: 360px;
+            padding: 24px 24px 16px;
+            border-radius: 24px;
+            background-color: #fff;
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .modal-container .img-box{
+            width: 100%;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .modal-cookie{
+            font-size: 1.1em;
+            color: #999;
+            text-align: right;
+        }
+        .btn-modal-close{
+            font-size: 1.2em;
+            color: #999;
+            cursor: pointer;
+        }
+        .btn-modal-close:hover{
+            color: #000;
+        }
+
+        /* banner-top */
+        .banner-top{
+            position: relative;
+            cursor: pointer;
+        } 
+        .banner-top .container{
+            padding: 0;
+        }
+        .banner-top .img-box{
+            position: relative;
+        }
+        .btn-banner-top-close{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            line-height: 16px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* header */
+        .header{
+            position:relative;
+            border:1px solid rgba(255,255,255,0.5);
+            padding:10px 0;
+            background-color:#0e090a;
+            color:#fff;
+        }
+        h1{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        h1 span{
+            display:none;
+        }
+        .quick-nav{
+            margin-bottom:10px;
+        }
+        .quick-nav,.nav{
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+        }
+        .btn-mo-quick,.btn-mo-nav{
+            display:none;
+            font-size:1.4em;
+        }
+        .quick-nav>ul,.nav>ul{
+            display:flex;
+            flex-flow:row nowrap;
+        }
+        .quick-nav>ul>li{
+            margin-right:20px;
+            opacity:0.5;
+        }
+        .quick-nav>ul>li:last-child{
+            margin-right:0;
+        }
+        .nav>ul>li{
+            margin-right:100px;            
+            font-size:1.6em;
+        }
+        .nav>ul>li:last-child{
+            margin-right:0;
+        }
+        .sub-nav{
+            position:absolute;
+            left:0;
+            right:0;
+            top:calc(100% + 1px);
+            display:none;
+            padding:10px 0;
+            background-color:#0e090a;
+            color:#fff;
+        }
+        .sub-nav ul{
+            display:flex;
+            flex-flow:row nowrap;                        
+            max-width:1200px;
+            margin:0 auto;
+            padding: 0 20px;
+        }
+        .theater-sub-nav ul{
+            padding-left:250px;
+        }
+        .event-sub-nav ul{
+            justify-content:flex-end;
+            padding-right:210px;
+        }
+        .benefit-sub-nav ul{
+            justify-content:flex-end;
+        }
+        .sub-nav li{
+            margin-right:20px;
+            font-size:1rem;
+            opacity:0.5;
+        }
+        .sub-nav li:last-child{
+            margin-right:0;
+        }
+        .sub-nav li:hover{
+            opacity:1;
+        }
+
+        @media (max-width:1200px){
+            .btn-banner-top-close{
+                bottom: auto;
+                top: 0;
+            }
+        }
+
+        @media (max-width:1024px) {
+            h1{
+                left: 20px;
+                transform: translate(0,-50%);
+            }
+            .quick-nav,.nav{
+                justify-content: flex-end;
+            }
+            .quick-nav>ul:first-child{
+                margin-right: 20px;
+            }
+            .nav>ul:first-child{
+                margin-right: 60px;
+            }
+            .nav>ul>li{
+                margin-right: 60px;
+            }
+            .sub-nav ul{
+                justify-content: flex-end;
+            }
+            .movie-sub-nav ul{
+                padding-right: 450px;
+            }
+            .ticket-sub-nav ul{
+                padding-right: 350px;
+            }
+            .theater-sub-nav ul{
+                padding-right: 330px;
+            }
+        }
+
+        @media (max-width:840px){
+            h1{
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .quick-nav{
+                position: absolute;
+                left: 20px;
+            }
+            .btn-mo-quick{
+                display: block;
+            }
+            .quick-nav ul{
+                display: none;
+            }
         }
     </style>
 
 </head>
 <body>
-    
+    <section class="sec skip-menu">
+        <a href="#">본문 바로가기</a>
+        <a href="#">푸터 바로가기</a>
+    </section>    
 
+    <section class="sec modal-popup">
+        <div class="modal-container">
+            <div class="img-box">
+                <a href="#">
+                    <img src="./images/movie-list01.jpg" alt="나일강의 죽음 바로가기">
+                </a>
+            </div>
+            <div class="modal-cookie">
+                <label>
+                    <input type="checkbox"> 하루동안 보지 않기
+                </label>
+            </div>
+            <div class="btn-modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>  
+    </section>
 
-
+    <section class="sec wrap">
+        <section class="banner-top">
+            <div class="container">
+                <div class="img-box">
+                    <a href="#"><img src="./images/banner-top.jpg" alt="현대해상 바로가기"></a>
+                    <div class="ad">AD</div>
+                </div>
+            </div>
+            <div class="btn-banner-top-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </section>
+        <header class="header">
+            <div class="container">
+                <h1>
+                    <span>메가박스</span>
+                    <div class="img-box">
+                        <a href="./index.html">
+                            <img src="./images/logo-white.png" alt="메가박스">
+                        </a>
+                    </div>
+                </h1>
+                <div class="quick-nav">
+                    <div class="btn-mo-quick">
+                        <i class="fas fa-calendar-minus"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#">VIP LOUNGE</a></li>
+                        <li><a href="#">멤버십</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">빠른예매</a></li>
+                    </ul>
+                </div>
+                <div class="btn-mo-nav">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">영화</a>
+                            <div class="sub-nav movie-sub-nav">
+                                 <ul>
+                                    <li><a href="#">전체영화</a></li>
+                                    <li><a href="#">N스크린</a></li>
+                                    <li><a href="#">큐레이션</a></li>
+                                    <li><a href="#">무비포스트</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li>
+                            <a href="#">예매</a>
+                            <div class="sub-nav ticket-sub-nav">
+                                <ul>
+                                    <li><a href="#">빠른예매</a></li>
+                                    <li><a href="#">상영시간표</a></li>
+                                    <li><a href="#">더 부티크 프라이빗 예매</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li>
+                            <a href="#">극장</a>
+                            <div class="sub-nav theater-sub-nav">
+                                <ul>
+                                    <li><a href="#">전체극장</a></li>
+                                    <li><a href="#">특별관</a></li>
+                                </ul>
+                            </div>             
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <div class="sub-nav event-sub-nav">
+                                <ul>
+                                    <li><a href="#">진행중 이벤트</a></li>
+                                    <li><a href="#">지난 이벤트</a></li>
+                                    <li><a href="#">당첨자 발표</a></li>
+                                </ul>
+                            </div>      
+                        </li>
+                        <li><a href="#">스토어</a></li>
+                        <li>
+                            <a href="#">혜택</a>
+                            <div class="sub-nav benefit-sub-nav">
+                                <ul>
+                                    <li><a href="#">메가박스 멤버십</a></li>
+                                    <li><a href="#">제휴/할인</a></li>
+                                </ul>
+                            </div>      
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="sec movie-list">
+            <div class="container"></div>
+        </section>
+        <section class="sec benefit">
+            <div class="container"></div>
+        </section>
+        <section class="sec curation">
+            <div class="container"></div>
+        </section>
+        <section class="sec megainfo">
+            <div class="container"></div>
+        </section>
+        <section class="sec banner-bottom">
+            <div class="container"></div>
+        </section>
+        <footer class="footer">
+            <div class="container"></div>
+        </footer>
+    </section>
 
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- font-awesome js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- jquery-cookie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Swiper js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.min.js" integrity="sha512-+1MtN0rwSlEnZo0agG99mCQChlBtfe8hyHItwWtgiD33mWvaNVZkZB9yX2S92z5HgDg1+EcitjutZejbHUcZAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        $('body').css('background','red');
+        // btn-modal-close
+        $('.btn-modal-close').on({
+            'click':function(){
+                $('.modal-popup').css('display','none');
+                if($('.modal-cookie input').is(':checked')){
+                    $.cookie('modal-popup','no', {expires: 1});
+                }
+            }
+        })
+
+        if($.cookie('modal-popup') == 'no'){
+            $('.modal-popup').css('display','none')
+        }else{
+            $('.modal-popup').css('display','block')
+        }
+
+        // banner-top-close
+        $('.btn-banner-top-close').on({
+            'click':function(){
+                $('.banner-top').css('display','none');
+            }
+        })
+
+        // sub-nav call
+        $('.nav>ul>li').on({
+            'mouseover':function(){
+                $('.sub-nav').css('display','none');
+                $(this).children('.sub-nav').css('display','block');
+            }
+        });
+
+        // sub nav close
+        $('.sub-nav').on({
+            'mouseout':function(){
+                $(this).css('display','none');
+            }
+        })
     </script>
 </body>
 </html>
