@@ -46,7 +46,7 @@
         }
         .wrap,body{
             width:100vw;
-            overflow:hidden;
+            /* overflow:hidden; */
         }
         .wrap>.sec{
             padding: 40px 0 80px;
@@ -58,7 +58,7 @@
             padding: 0 20px;
         }
         .sec-tit{
-            margin-bottom: 20px;
+            margin-bottom: 60px;
             font-size: 2em;
             color: #352461;
         }
@@ -267,7 +267,7 @@
             left:0;
             right:0;
             top:0;
-            height:600px;
+            height:800px;
         }
         .bg-box img{
             position:absolute;
@@ -292,6 +292,15 @@
             position: relative;
             z-index: 1001;
         }
+        .movie-list article{
+            display:none;
+        }
+        .movie-list article.active{
+            display:block;
+        }
+        .movie-list .list-tit{
+            margin-bottom: 50px;
+        }
         .movie-list .list-tit ul{
             display: flex;
             justify-content:center;
@@ -315,8 +324,9 @@
         }
         .movie-list .list-tit ul li:last-child{
             border-right:1px solid #352461;
-        }
+        }      
         .poster{
+            margin-bottom:20px;
             border-radius:1em;
             overflow:hidden;
             position:relative;
@@ -335,6 +345,54 @@
             font-weight:500;
             font-size:2em;
             text-shadow:1px 1px 1px black;
+            font-style:italic;            
+        }
+        .poster .movie-contents{
+            background-color:rgba(0,0,0,0.8);
+            opacity:0;
+            transition:0.3s;            
+        }
+        .poster .movie-contents:hover{
+            opacity:1; 
+        }
+        .poster .movie-contents a{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:center;
+            width:100%;
+            height:100%;
+        }        
+        .poster .movie-contents a p:first-child{
+            width:100%;
+            height:80%;
+            border-bottom:1px solid rgba(255,255,255,0.3);            
+        }
+        .poster .movie-contents a p:last-child{
+            margin:-10px 0 0 10px;
+            font-weight:700;
+            font-size:2em;
+            color:#037b94;
+        }
+        .poster-bottom{
+            display:flex;
+            justify-content:center;
+        }
+        .poster-bottom button{
+            padding:10px 0;
+            border-radius:0.5em;
+            font-size:1.2em;
+            color:#fff;
+        }
+        .poster-bottom button:first-child{
+            flex:1;
+            margin-right:6px;
+            border:1px solid rgba(255,255,255,0.5);
+            background-color:transparent;
+        }
+        .poster-bottom button:last-child{
+            flex:2;
+            border:none;            
+            background-color:#037b94;            
         }
 
 
@@ -342,6 +400,13 @@
             .btn-banner-top-close{
                 bottom: auto;
                 top: 0;
+            }
+            .poster .movie-contents{
+                font-size: 1.2em;
+            }
+            .poster .movie-contents a p:last-child{
+                font-weight: 500;
+                margin-top: -6px;
             }
         }
 
@@ -373,6 +438,9 @@
             }
             .theater-sub-nav ul{
                 padding-right: 330px;
+            }
+            .movie-list .list-tit{
+                margin-bottom: 20px;
             }
             .movie-list .list-tit ul{
                 justify-content:flex-start;
@@ -510,6 +578,9 @@
             }
             .movie-list .list-tit ul li span{
                 display: none;
+            }
+            .poster .movie-contents p:first-child{
+                font-size: 2vw;
             }
         }
     </style>
@@ -653,7 +724,8 @@
                 </div>
 
                 <div class="movie-list">
-                    <article class="box-office">
+                    <!-- 박스오피스 -->
+                    <article class="box-office active">
                         <!-- Slider main container -->
                         <div class="swiper">
                             <!-- Additional required wrapper -->
@@ -914,9 +986,911 @@
                             </div>                            
                         </div>
                     </article>
+                    <!-- 박스오피스 끝 -->
+
+                    <!-- 상영예정작 -->
+                    <article class="movie-exp">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide swiper-slide01">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp01.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>1</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>0</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>152</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div> 
+                                <div class="swiper-slide swiper-slide02">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp02.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>2</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>524</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide03">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp03.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>3</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>215</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide04">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp04.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>4</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>316</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide05">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp05.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>5</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>258</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide06">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp06.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>6</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>52</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>                               
+                                <div class="swiper-slide swiper-slide07">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp07.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>7</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>25</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>64</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide08">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp08.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>8</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>78</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide09">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp09.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>9</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>102<i class="far fa-heart"></i>
+                                            <span>258</span></span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide10">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp10.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>10</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>31</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>200</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide11">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp11.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>11</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>9</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>48</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide12">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/movie-exp12.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>12</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>12</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>92</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+                    <!-- 상영예정작끝 -->
+
+                    <!-- 필름소사이어티 -->
+                    <article class="flim">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide swiper-slide01">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list01.jpg" alt="필름소사이어티1">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>1</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>0</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>152</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div> 
+                                <div class="swiper-slide swiper-slide02">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list02.jpg" alt="필름소사이어티2">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>2</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>524</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide03">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list03.jpg" alt="필름소사이어티3">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>3</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>215</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide04">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list04.jpg" alt="필름소사이어티4">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>4</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>316</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide05">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list05.jpg" alt="필름소사이어티5">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>5</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>258</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide06">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list06.jpg" alt="필름소사이어티6">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>6</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>52</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>                               
+                                <div class="swiper-slide swiper-slide07">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list07.jpg" alt="필름소사이어티7">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>7</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>25</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>64</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide08">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list08.jpg" alt="필름소사시어티8">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>8</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>78</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide09">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list09.jpg" alt="필름소사이어티9">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>9</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>102<i class="far fa-heart"></i>
+                                            <span>258</span></span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide10">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list10.jpg" alt="필름소사이어티10">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>10</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>31</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>200</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide11">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list11.jpg" alt="필름소사이어티11">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>11</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>9</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>48</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide12">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/film-list12.jpg" alt="필름소사이어티12">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>12</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>12</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>92</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+                    <!-- 필름소사이어티끝 -->
+
+                    <!-- 클래식소사이어티 -->
+                    <article class="clasic">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide swiper-slide01">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list01.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>1</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>0</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>152</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div> 
+                                <div class="swiper-slide swiper-slide02">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list02.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>2</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>524</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide03">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list03.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>3</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>215</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide04">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list04.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>4</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>316</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide05">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list05.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>5</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>258</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide06">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list06.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>6</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>52</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>                               
+                                <div class="swiper-slide swiper-slide07">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list07.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>7</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>25</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>64</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide08">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list08.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>8</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>78</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide09">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list09.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>9</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>102<i class="far fa-heart"></i>
+                                            <span>258</span></span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide10">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list10.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>10</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>31</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>200</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide11">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list11.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>11</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>9</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>48</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide12">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/clasic-list12.jpg" alt="클래식소사이어티">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>12</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>12</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>92</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+                    <!-- 플래식소사이어티끝 -->
                 </div>
-
-
             </div>
         </section>
         <section class="sec benefit">
@@ -1008,7 +1982,10 @@
         $('.movie-list .list-tit ul li').on({
             'click':function(){
                 $('.movie-list .list-tit ul li').removeClass('active');
+                $('.movie-list article').removeClass('active');
                 $(this).addClass('active');
+                let acIdx = $('.movie-list .list-tit ul li').index(this);
+                $('.movie-list article').eq(acIdx).addClass('active');
             }
         })
 
@@ -1018,19 +1995,35 @@
             spaceBetween: 20,           
             breakpoints: {
                 0: {
-                    slidesPerView: 1.5,                   
+                    slidesPerView: 1.5, 
+                    spaceBetween: 40,                   
                 },
                 768: {
                     slidesPerView: 2.5,
+                    spaceBetween: 36,  
                 },
                 1024: {
                     slidesPerView: 3.5,
+                    spaceBetween: 30, 
                 },
                 1200: {
                     slidesPerView: 4.2,
                 },
             },
         });
+   
+        let filmImg = document.querySelectorAll('.film img');
+        for(let cnt=0; cnt<filmImg.length; cnt++){
+            if(cnt<9){
+                filmImg[cnt].setAttribute('src','./images/film-list0' + filmSrc + (cnt+1) + '.jpg');
+            }else{
+                filmImg[cnt].setAttribute('src','./images/film-list' + filmSrc + (cnt+1) + '.jpg');
+            } 
+        }
+
+        
+   
+   
     </script>
 </body>
 </html>
