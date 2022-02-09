@@ -36,136 +36,132 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.css" integrity="sha512-SID9h7gl6DWMEv9gG4Msa2+Cv6Th1HK9Bswoy7ArayNta2hdRkUhhzprlgocF7X+LYH2QiroQVnYloED73SdrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>MEET PLAY SHARE, 메가박스</title>
 
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-
         :root{
             font-family: 'Noto Sans KR', sans-serif;
-            font-size: 14px;
-            /* background-color: #000; */
+            font-size:14px;
         }
         .wrap,body{
             width:100vw;
             /* overflow:hidden; */
         }
         .wrap>.sec{
-            padding: 40px 0 80px;
+            padding:40px 0 80px;
         }
         .container{
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width:100%;
+            max-width:1200px;
+            margin:0 auto;
+            padding:0 20px;
         }
         .sec-tit{
-            margin-bottom: 60px;
-            font-size: 2em;
-            color: #352461;
+            margin-bottom:40px;
+            font-size:2em;
+            color:#352461;  
         }
         .sec-tit-light{
-            color: #fff;
+            color:#fff;
         }
         .ad{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: 1;     
-
-            padding: 2px 6px;
-            background-color: #000;  
-            color: #fff;
-            opacity: 0.3;
+            position:absolute;
+            right:0;
+            bottom:0;
+            z-index:1;
+            
+            padding:2px 6px;
+            background-color:#000;
+            color:#fff;
+            opacity:0.3;
         }
         .skip-menu a{
-            position: fixed;
-            left: 50%;
-            top: -100%;
-            z-index: 9999;
-            transform: translateX(-50%);
+            position:fixed;
+            left:50%;
+            top:-100%;
+            z-index:9999;
+            transform:translateX(-50%);
 
-            display: inline-block;
-            width: 200px;
-            padding: 10px;
-            border: 2px solid #fff;
-            border-radius: 6px;
-            background-color: #352461;
-            color: #fff;
-            text-align: center;
+            display:inline-block;
+            width:200px;
+            border:2px solid #fff;
+            padding:10px;
+            border-radius:6px;
+            background-color:#352461;
+            color:#fff;
+            text-align:center;
         }
         .skip-menu a:focus{
-            top: 0%;
+            top:0%;
         }
-
-        /* modal-popup */
         .modal-popup{
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: 9998;
-            background-color: rgba(0,0,0,0.3);
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            z-index:9998;
+            background-color:rgba(0,0,0,0.3);
         }
         .modal-container{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
 
-            width: 100%;
-            max-width: 360px;
-            padding: 24px 24px 16px;
-            border-radius: 24px;
-            background-color: #fff;
+            width:100%;
+            max-width:360px;
+            padding:24px 24px 16px;
+            border-radius:24px;
+            background-color:#fff;
 
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:space-between;
         }
         .modal-container .img-box{
-            width: 100%;
-            margin-bottom: 12px;
-            border-radius: 12px;
-            overflow: hidden;
+            width:100%;
+            margin-bottom:12px;
+            border-radius:12px;
+            overflow:hidden;
         }
         .modal-cookie{
-            font-size: 1.1em;
-            color: #999;
-            text-align: right;
+            font-size:1.1em;
+            color:#999;
+            text-align:right;
+        }
+        .modal-cookie:hover{
+            color:#000;
         }
         .btn-modal-close{
-            font-size: 1.2em;
-            color: #999;
-            cursor: pointer;
+           font-size:1.2em;
+           color:#999;
+           cursor:pointer;
         }
         .btn-modal-close:hover{
-            color: #000;
+            color:#000;
         }
-
-        /* banner-top */
         .banner-top{
-            position: relative;
-            cursor: pointer;
-        } 
+            position:relative;            
+        }
         .banner-top .container{
-            padding: 0;
+            padding:0;
         }
         .banner-top .img-box{
-            position: relative;
-        }
+            position:relative;
+        }        
         .btn-banner-top-close{
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: 100;
-
-            width: 18px;
-            height: 18px;
-            text-align: center;
-            line-height: 16px;
-            background-color: rgba(0,0,0,0.7);
-            color: #fff;
-            cursor: pointer;
+            position:absolute;
+            right:0;
+            bottom:0;
+            z-index:100;
+            
+            width:18px;
+            height:18px;
+            text-align:center;
+            line-height:16px;
+            background-color:#999;
+            cursor:pointer;
         }
 
         /* header */
@@ -196,7 +192,8 @@
         }
         .btn-mo-quick,.btn-mo-nav{
             display:none;
-            font-size:1.4em;
+            font-size:1.6em;  
+            cursor: pointer;         
         }
         .quick-nav>ul,.nav>ul{
             display:flex;
@@ -231,10 +228,10 @@
             flex-flow:row nowrap;                        
             max-width:1200px;
             margin:0 auto;
-            padding: 0 20px;
+            padding:0 20px;
         }
         .theater-sub-nav ul{
-            padding-left:250px;
+            padding-left:240px;
         }
         .event-sub-nav ul{
             justify-content:flex-end;
@@ -253,12 +250,7 @@
         }
         .sub-nav li:hover{
             opacity:1;
-        }
-
-        .movie-list{
-            position:relative;
-            z-index:999;
-        }
+        }  
 
         /* bg-box */
         .bg-box{
@@ -267,7 +259,7 @@
             left:0;
             right:0;
             top:0;
-            height:800px;
+            bottom:0;
         }
         .bg-box img{
             position:absolute;
@@ -288,21 +280,21 @@
             background:url('/images/patten.png') repeat left top;
             opacity:0.1;
         }
+
+        /* movie-list */
+        .movie-list{
+            position:relative;
+            z-index:999;
+        }
         .movie-list .container{
-            position: relative;
-            z-index: 1001;
-        }
-        .movie-list article{
-            display:none;
-        }
-        .movie-list article.active{
-            display:block;
+            position:relative;
+            z-index:1001;
         }
         .movie-list .list-tit{
-            margin-bottom: 50px;
+            margin-bottom:50px;
         }
         .movie-list .list-tit ul{
-            display: flex;
+            display:flex;
             justify-content:center;
         }
         .movie-list .list-tit ul li{
@@ -324,7 +316,16 @@
         }
         .movie-list .list-tit ul li:last-child{
             border-right:1px solid #352461;
-        }      
+        }
+        .movie-box{
+            margin-bottom:50px;
+        }
+        .movie-box article{
+            display:none;
+        }
+        .movie-box article.active{
+            display:block;
+        }
         .poster{
             margin-bottom:20px;
             border-radius:1em;
@@ -394,68 +395,282 @@
             border:none;            
             background-color:#037b94;            
         }
-
         .movie-list-nav{
-            display: flex;
-            flex-flow: row nowrap;
-            flex:2;
-            border:none;
-            /* background-color: #037b94; */
+            font-size:1.1em;
+            color:#fff;
         }
-        .movie-list ul{
-            padding: 20px 0;
-            background-color: rgba(0,0,0,0.3);
+        .movie-list-nav ul{
+            display:flex; 
+            flex-flow:row wrap;
+            padding:20px 0;
+            background-color:rgba(0,0,0,0.1);           
         }
         .movie-list-nav ul li{
-            width: 25%;
-            border-right: 2px solid rgba(255,255,255,0.3);
+            width:25%;
+            border-right:1px solid rgba(255,255,255,0.3);
+            text-align:center;
+        }        
+        .movie-list-nav ul li:last-child{
+            border-right-color:transparent;
+        }
+        .movie-list-nav ul li:first-child a{
+            border-bottom:1px solid rgba(255,255,255,0.3);
+        }
+        .movie-list-nav input{
+            border:none;
+            background-color:transparent;
+            font-size:1.1em;
+            color:#fff;
+        }
+        .movie-list-nav input:focus{
+            border:none;
+            outline:none;
+        }
+        .movie-list .in{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .movie-list .in i{
+            margin-right:0.5em;
+            font-size:2em;
+            opacity: 0.8;
         }
 
+        /* mouse-move */
+        .mouse-move{
+            width: 18px;
+            height: 30px;
+            margin: 20px auto;
+            border: 2px solid #fff;
+            border-radius: 9px;
+            display: flex;
+            animation-name: mouse-ani;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .mouse-move::after{
+            content: '';
+            display: block;
+            width: 2px;
+            height: 6px;
+            margin: 10px auto;
+            background-color: #fff;
+        }
+
+        /* 마우스 애니메이션 */
+        @keyframes mouse-ani {
+            0%{
+                transform: translateY(0);
+            }
+            40%{
+                transform: translateY(20px);
+            }
+            60%{
+                transform: translateY(20px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+
+        /* benefit */
+        .benefit{
+            position:relative;
+        }
+        .bg-benefit{
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:0;
+            z-index:-1;
+            height:300px;
+            background-color:#503396;
+        }
+        .benefit-contents{
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+            margin-bottom:50px;
+        }
+        .benefit-list{
+            width:60.45454545454545%;
+            display:flex;
+            flex-flow:row wrap;
+            justify-content:space-between;
+        }
+        .benefit-slider01,.benefit-slider02{
+            width:50%;
+        }
+        .benefit-banner01{
+            width:66.31578947368421%;            
+        }
+        .benefit-banner02{
+            width:30.67669172932331%;            
+        }
+        .benefit-ad{
+            position: relative;
+            width:37.72727272727273%;
+        }
+        .benefit-banner01 a,.benefit-banner02 a{
+            display:none;
+        }
+        .benefit-banner01 a.active,.benefit-banner02 a.active{
+            display:block;
+        }
+        .benefit-banner01 img,.benefit-banner02 img{
+            border-radius:6px;
+            box-shadow:10px 10px 10px rgba(0,0,0,0.3);
+        }
+
+        /* button play/stop */
+        .btn-play-pause>i{
+            cursor: pointer;
+            display: none;
+        }
+        .btn-play-pause>i.active{
+            display: inline;
+        }
+
+        
+        /* control-box */
+        .controls-box{
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-between;
+        }
+        .controls-box>div{
+            position:static !important;
+            display:flex;            
+            justify-content:center;
+            align-items:center;            
+        }
+        .controls-box>.scrollbar{
+            width:75%;
+            position:relative !important;
+        }
+
+
+        .scrollbar span{
+            width:25%;
+            height:2px;                        
+            background-color:rgba(0,0,0,0.1);
+        }
+        .scrollbar #move-span{
+            position:absolute;            
+            left:0;
+            top:50%;
+            transform:translateY(-50%);
+           
+            display:block;
+            text-indent:-999999px;
+            width:25%;
+            height:2px;
+            background-color:#352461;
+        }
+
+        .swiper-button-prev,.swiper-button-next{
+            width:5%;
+            margin:0;
+        }
+        .swiper-button-prev:after,.swiper-button-next:after{
+            font-weight:900;
+            font-size:8px;
+            color:#352461;
+        }
+        .btn-play-pause{
+            width:5%;            
+        }
+        .btn-play-pause i::before{
+            color:#352461;
+        }
+        .swiper-pagination{
+            width:10%;
+        }
+        .benefit-nav ul{
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:space-around;
+            align-content:center;
+            font-weight:300; 
+            font-size:1.1em;           
+            color:rgba(255,255,255,0.8);
+        }
+        .benefit-nav a{
+            display:block;
+            text-align:center;
+            margin-bottom:10px;
+        }
+        .benefit-nav a i{
+            font-size:3em;
+        }
+
+        /* curation */
+        .curation{
+            background-color: #252451;
+        }
+        .curation h2{
+            color: #fff;
+        }
+        .curation-contents{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-content: flex-start;
+        }
+        .select-curation{
+            flex: 1;
+            margin-right: 50px;
+            background-color: red;
+        }
+        .curation-content{
+            flex: 2;
+            background-color: green;
+        }
+
+        /* 브라우저별 */
         @media (max-width:1200px){
             .btn-banner-top-close{
-                bottom: auto;
-                top: 0;
-            }
+                bottom:auto;
+                top:0;
+            } 
             .poster .movie-contents{
-                font-size: 1.2em;
+                font-size:1.2em;
             }
             .poster .movie-contents a p:last-child{
-                font-weight: 500;
-                margin-top: -6px;
+                font-weight:500;
+                margin-top:-13px;
             }
         }
 
-        @media (max-width:1024px) {
-            h1{
-                left: 20px;
-                transform: translate(0,-50%);
+        @media (max-width:1024px){
+            h1{               
+                left:20px;                
+                transform:translate(0,-50%);
             }
             .quick-nav,.nav{
-                justify-content: flex-end;
+                justify-content:flex-end;
             }
             .quick-nav>ul:first-child{
-                margin-right: 20px;
+                margin-right:20px;
             }
-            .nav>ul:first-child{
-                margin-right: 60px;
-            }
-            .nav>ul>li{
-                margin-right: 60px;
-            }
+            .nav>ul:first-child{margin-right:60px;}
+            .nav>ul>li{margin-right:60px;}
             .sub-nav ul{
                 justify-content: flex-end;
             }
             .movie-sub-nav ul{
-                padding-right: 450px;
+                padding-right:450px;
             }
             .ticket-sub-nav ul{
-                padding-right: 350px;
+                padding-right:350px;
             }
             .theater-sub-nav ul{
-                padding-right: 330px;
+                padding-right:330px;
             }
             .movie-list .list-tit{
-                margin-bottom: 20px;
+                margin-bottom:20px;
             }
             .movie-list .list-tit ul{
                 justify-content:flex-start;
@@ -472,17 +687,32 @@
                 background-color:transparent;
                 color:rgba(255,255,255,0.5);
             }
-
+            .movie-list .list-tit ul li:last-child{
+                margin:0;
+            }
             .movie-list .list-tit ul li:hover,
             .movie-list .list-tit ul li.active{
                 border-bottom:2px solid #fff;
                 color:rgba(255,255,255,1);
             }
+            .movie-list-nav ul li:first-child a{
+                border:none;
+            }
+            .movie-list a i{
+                font-size:2em;
+            }
+            .movie-list .in i{
+                margin:0;
+            }
+            .movie-list-nav input,
+            .movie-list-nav span{
+                display:none;
+            }
         }
 
         @media (max-width:840px){
             .wrap{
-                position:fixed;
+                position:absolute;
                 left:0;
                 right:0;
                 top:0;
@@ -506,106 +736,116 @@
             .header .container{
                 display:flex;
                 justify-content:space-between;
-            }
+            }           
             h1{
                 left:50%;
                 transform:translate(-50%,-50%);
             }
             .quick-nav{
-                flex-direction: column;
-                justify-content: flex-start;
+                flex-direction:column;
+                justify-content:flex-start;
                 position:fixed;
                 left:-50%;
                 right:100%;
                 top:0;
                 bottom:0;
-                padding: 30px 20px;
+                padding:30px 20px;
                 background-color:#000;
                 transition:0.3s;
-            }  
-            .quick-nav>ul{
-                flex-direction: column;
-            }
-            .quick-nav>ul:first-child{
-                order: 2;
-                flex-direction: column;
-            }
-            .quick-nav>ul:first-child>li{
-                margin-bottom: 20px;
-                font-size: 1.4em;
-                color: #fff;
-                opacity: 1;
-            }
-            .quick-nav>ul:last-child{
-                flex-flow: wrap;
-                order: 1;
-                margin-bottom: 30px;
-            }
+            }       
             .quick-nav.show-quick{
                 left:0;
                 right:50%;
             }
+            .quick-nav>ul:first-child{
+                order:2;
+                flex-direction:column;
+            }            
+            .quick-nav>ul:first-child>li{
+                margin-bottom:20px;
+                font-size: 1.4em;
+                opacity:1;
+            }
+            .quick-nav>ul:last-child{
+                flex-wrap:wrap;                
+                order:1;
+                margin-bottom:30px;
+            }           
             .nav{
-                flex-direction: column;
+                flex-direction:column;
                 justify-content: flex-start;
                 position:fixed;
                 left:100%;
                 right:-50%;
                 top:0;
                 bottom:0;
-                padding: 30px 20px;
+                padding:30px 20px;
                 background-color:#000;
                 transition:0.3s;
-            }
-            .nav>ul{
-                flex-direction: column;
-            }
-            .nav>ul:first-child{
-                margin-right: 0;
-            }
-            .nav>ul>li{
-                margin-bottom: 20px;
-            }
-            .sub-nav{
-                position: static;
-                background-color: #000;
-            }
-            .sub-nav>ul{
-                flex-direction: column;
-                padding: 0;     
             }
             .nav.show-nav{
                 left:50%;
                 right:0;
             }
+            .nav>ul{
+                flex-direction:column;               
+            }
+            .nav>ul:first-child{
+                margin-right:0;
+            }
+            .nav>ul>li{
+                margin-right:0;
+                margin-bottom:20px;
+            }
+            .sub-nav{
+                position:static;
+            }
+            .sub-nav>ul{
+                flex-direction:column;
+                padding:0;
+            }
             .btn-mo-quick,.btn-mo-nav{
                 display:block;
-                cursor: pointer;
-            }  
+            }        
+            .benefit-list{
+                width: 100%;
+            }
+            .benefit-ad{
+                display: none;
+            }
         }
 
         @media (max-width:490px){
-            .movie-list .list-tit ul li,
+            .movie-list .list-tit ul li,            
             .movie-list .list-tit ul li:hover,
             .movie-list .list-tit ul li.active{
-                margin-right: 12px;
-                font-size: 1.2em;
+                margin-right:12px;
+                font-size:1.1em;
             }
             .movie-list .list-tit ul li span{
-                display: none;
+                display:none;
             }
             .poster .movie-contents p:first-child{
-                font-size: 2vw;
+                font-size:2vw;
+            }
+            .movie-list a i,
+            .movie-list .in i{
+                font-size:1.6em;
+            }
+            .benefit-banner01{
+                width: 100%;
+            }
+            .benefit-banner02{
+                display: none;
             }
         }
     </style>
-
 </head>
 <body>
     <section class="sec skip-menu">
         <a href="#">본문 바로가기</a>
         <a href="#">푸터 바로가기</a>
-    </section>    
+    </section>
 
     <section class="sec modal-popup">
         <div class="modal-container">
@@ -615,14 +855,12 @@
                 </a>
             </div>
             <div class="modal-cookie">
-                <label>
-                    <input type="checkbox"> 하루동안 보지 않기
-                </label>
+                <label><input type="checkbox"> 하루동안 보지 않기</label>
             </div>
             <div class="btn-modal-close">
                 <i class="fas fa-times"></i>
             </div>
-        </div>  
+        </div>
     </section>
 
     <section class="sec wrap">
@@ -670,13 +908,13 @@
                         <li>
                             <a href="#">영화</a>
                             <div class="sub-nav movie-sub-nav">
-                                 <ul>
+                                <ul>
                                     <li><a href="#">전체영화</a></li>
                                     <li><a href="#">N스크린</a></li>
                                     <li><a href="#">큐레이션</a></li>
                                     <li><a href="#">무비포스트</a></li>
                                 </ul>
-                            </div> 
+                            </div>
                         </li>
                         <li>
                             <a href="#">예매</a>
@@ -686,7 +924,7 @@
                                     <li><a href="#">상영시간표</a></li>
                                     <li><a href="#">더 부티크 프라이빗 예매</a></li>
                                 </ul>
-                            </div> 
+                            </div>                                
                         </li>
                         <li>
                             <a href="#">극장</a>
@@ -695,7 +933,7 @@
                                     <li><a href="#">전체극장</a></li>
                                     <li><a href="#">특별관</a></li>
                                 </ul>
-                            </div>             
+                            </div>
                         </li>
                     </ul>
                     <ul>
@@ -705,11 +943,13 @@
                                 <ul>
                                     <li><a href="#">진행중 이벤트</a></li>
                                     <li><a href="#">지난 이벤트</a></li>
-                                    <li><a href="#">당첨자 발표</a></li>
+                                    <li><a href="#">당첨자발표</a></li>
                                 </ul>
-                            </div>      
+                            </div>
                         </li>
-                        <li><a href="#">스토어</a></li>
+                        <li>
+                            <a href="#">스토어</a>
+                        </li>
                         <li>
                             <a href="#">혜택</a>
                             <div class="sub-nav benefit-sub-nav">
@@ -717,7 +957,7 @@
                                     <li><a href="#">메가박스 멤버십</a></li>
                                     <li><a href="#">제휴/할인</a></li>
                                 </ul>
-                            </div>      
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -729,6 +969,7 @@
             </div>
             <div class="container">
                 <h2 class="sec-tit sec-tit-light">영화예매</h2>
+                
                 <div class="list-tit">
                     <ul>
                         <li class="active">박스오피스</li>
@@ -738,7 +979,7 @@
                     </ul>
                 </div>
 
-                <div class="movie-list">
+                <div class="movie-box">
                     <!-- 박스오피스 -->
                     <article class="box-office active">
                         <!-- Slider main container -->
@@ -763,270 +1004,6 @@
                                         </div>
                                     </div>
                                     <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div> 
-                                <div class="swiper-slide swiper-slide02">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list02.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>2</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>5</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide03">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list03.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>3</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>2</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide04">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list04.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>4</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>5</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide05">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list05.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>5</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>15</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide06">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list06.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>6</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>5</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>                               
-                                <div class="swiper-slide swiper-slide07">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list07.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>7</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>25</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide08">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list08.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>8</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>15</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide09">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list09.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>9</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>2</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide10">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list10.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>10</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>31</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide11">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list11.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>11</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>9</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide swiper-slide12">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-list12.jpg" alt="나일강의 죽음">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>12</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>12</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
-                                        <button type="button" class="btn-best">좋아요</button>
-                                        <button type="button" class="btn-ticket">예매</button>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
-                    </article>
-                    <!-- 박스오피스 끝 -->
-
-                    <!-- 상영예정작 -->
-                    <article class="movie-exp">
-                        <!-- Slider main container -->
-                        <div class="swiper">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide swiper-slide01">
-                                    <div class="poster">
-                                        <div class="img-box">
-                                            <img src="./images/movie-exp01.jpg" alt="상영예정작">
-                                        </div>
-                                        <div class="movie-num">
-                                            <h3>1</h3>
-                                        </div>
-                                        <div class="movie-contents">
-                                            <a href="#">
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
-                                                <p>관람평</p>
-                                                <p>0</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="poster-bottom">
                                         <button type="button" class="btn-best">
                                             <i class="far fa-heart"></i>
                                             <span>152</span>
@@ -1037,7 +1014,7 @@
                                 <div class="swiper-slide swiper-slide02">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp02.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list02.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>2</h3>
@@ -1061,7 +1038,7 @@
                                 <div class="swiper-slide swiper-slide03">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp03.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list03.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>3</h3>
@@ -1085,7 +1062,7 @@
                                 <div class="swiper-slide swiper-slide04">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp04.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list04.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>4</h3>
@@ -1109,7 +1086,7 @@
                                 <div class="swiper-slide swiper-slide05">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp05.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list05.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>5</h3>
@@ -1133,7 +1110,7 @@
                                 <div class="swiper-slide swiper-slide06">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp06.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list06.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>6</h3>
@@ -1157,7 +1134,7 @@
                                 <div class="swiper-slide swiper-slide07">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp07.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list07.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>7</h3>
@@ -1181,7 +1158,7 @@
                                 <div class="swiper-slide swiper-slide08">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp08.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list08.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>8</h3>
@@ -1205,7 +1182,7 @@
                                 <div class="swiper-slide swiper-slide09">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp09.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list09.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>9</h3>
@@ -1230,7 +1207,7 @@
                                 <div class="swiper-slide swiper-slide10">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp10.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list10.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>10</h3>
@@ -1254,7 +1231,7 @@
                                 <div class="swiper-slide swiper-slide11">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp11.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list11.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>11</h3>
@@ -1278,7 +1255,308 @@
                                 <div class="swiper-slide swiper-slide12">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/movie-exp12.jpg" alt="상영예정작">
+                                            <img src="./images/movie-list12.jpg" alt="나일강의 죽음">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>12</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>12</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>92</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </article>
+                    <!-- 박스오피스끝 -->
+
+                    <!-- 상영예정작 -->
+                    <article class="movie-exp">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide swiper-slide01">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list01.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>1</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>0</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>152</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div> 
+                                <div class="swiper-slide swiper-slide02">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list02.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>2</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>524</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide03">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list03.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>3</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>215</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide04">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list04.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>4</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>316</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide05">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list05.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>5</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>258</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide06">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list06.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>6</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>5</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>52</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>                               
+                                <div class="swiper-slide swiper-slide07">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list07.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>7</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>25</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>64</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide08">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list08.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>8</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>15</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>78</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide09">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list09.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>9</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>2</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>102<i class="far fa-heart"></i>
+                                            <span>258</span></span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide10">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list10.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>10</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>31</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>200</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide11">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list11.jpg" alt="상영예정작">
+                                        </div>
+                                        <div class="movie-num">
+                                            <h3>11</h3>
+                                        </div>
+                                        <div class="movie-contents">
+                                            <a href="#">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aliquam tempora velit ipsum reiciendis exercitationem impedit nemo voluptate necessitatibus laboriosam eum temporibus, at repudiandae quae veritatis, ad distinctio, molestias culpa.</p>
+                                                <p>관람평</p>
+                                                <p>9</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="poster-bottom">
+                                        <button type="button" class="btn-best">
+                                            <i class="far fa-heart"></i>
+                                            <span>48</span>
+                                        </button>
+                                        <button type="button" class="btn-ticket">예매</button>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide12">
+                                    <div class="poster">
+                                        <div class="img-box">
+                                            <img src="./images/exp-list12.jpg" alt="상영예정작">
                                         </div>
                                         <div class="movie-num">
                                             <h3>12</h3>
@@ -1305,7 +1583,7 @@
                     <!-- 상영예정작끝 -->
 
                     <!-- 필름소사이어티 -->
-                    <article class="flim">
+                    <article class="film">
                         <!-- Slider main container -->
                         <div class="swiper">
                             <!-- Additional required wrapper -->
@@ -1314,7 +1592,7 @@
                                 <div class="swiper-slide swiper-slide01">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list01.jpg" alt="필름소사이어티1">
+                                            <img src="./images/film-list01.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>1</h3>
@@ -1338,7 +1616,7 @@
                                 <div class="swiper-slide swiper-slide02">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list02.jpg" alt="필름소사이어티2">
+                                            <img src="./images/film-list02.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>2</h3>
@@ -1362,7 +1640,7 @@
                                 <div class="swiper-slide swiper-slide03">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list03.jpg" alt="필름소사이어티3">
+                                            <img src="./images/film-list03.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>3</h3>
@@ -1386,7 +1664,7 @@
                                 <div class="swiper-slide swiper-slide04">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list04.jpg" alt="필름소사이어티4">
+                                            <img src="./images/film-list04.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>4</h3>
@@ -1410,7 +1688,7 @@
                                 <div class="swiper-slide swiper-slide05">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list05.jpg" alt="필름소사이어티5">
+                                            <img src="./images/film-list05.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>5</h3>
@@ -1434,7 +1712,7 @@
                                 <div class="swiper-slide swiper-slide06">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list06.jpg" alt="필름소사이어티6">
+                                            <img src="./images/film-list06.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>6</h3>
@@ -1458,7 +1736,7 @@
                                 <div class="swiper-slide swiper-slide07">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list07.jpg" alt="필름소사이어티7">
+                                            <img src="./images/film-list07.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>7</h3>
@@ -1482,7 +1760,7 @@
                                 <div class="swiper-slide swiper-slide08">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list08.jpg" alt="필름소사시어티8">
+                                            <img src="./images/film-list08.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>8</h3>
@@ -1506,7 +1784,7 @@
                                 <div class="swiper-slide swiper-slide09">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list09.jpg" alt="필름소사이어티9">
+                                            <img src="./images/film-list09.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>9</h3>
@@ -1531,7 +1809,7 @@
                                 <div class="swiper-slide swiper-slide10">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list10.jpg" alt="필름소사이어티10">
+                                            <img src="./images/film-list10.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>10</h3>
@@ -1555,7 +1833,7 @@
                                 <div class="swiper-slide swiper-slide11">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list11.jpg" alt="필름소사이어티11">
+                                            <img src="./images/film-list11.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>11</h3>
@@ -1579,7 +1857,7 @@
                                 <div class="swiper-slide swiper-slide12">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/film-list12.jpg" alt="필름소사이어티12">
+                                            <img src="./images/film-list12.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>12</h3>
@@ -1615,7 +1893,7 @@
                                 <div class="swiper-slide swiper-slide01">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list01.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list01.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>1</h3>
@@ -1639,7 +1917,7 @@
                                 <div class="swiper-slide swiper-slide02">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list02.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list02.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>2</h3>
@@ -1663,7 +1941,7 @@
                                 <div class="swiper-slide swiper-slide03">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list03.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list03.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>3</h3>
@@ -1687,7 +1965,7 @@
                                 <div class="swiper-slide swiper-slide04">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list04.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list04.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>4</h3>
@@ -1711,7 +1989,7 @@
                                 <div class="swiper-slide swiper-slide05">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list05.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list05.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>5</h3>
@@ -1735,7 +2013,7 @@
                                 <div class="swiper-slide swiper-slide06">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list06.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list06.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>6</h3>
@@ -1759,7 +2037,7 @@
                                 <div class="swiper-slide swiper-slide07">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list07.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list07.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>7</h3>
@@ -1783,7 +2061,7 @@
                                 <div class="swiper-slide swiper-slide08">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list08.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list08.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>8</h3>
@@ -1807,7 +2085,7 @@
                                 <div class="swiper-slide swiper-slide09">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list09.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list09.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>9</h3>
@@ -1832,7 +2110,7 @@
                                 <div class="swiper-slide swiper-slide10">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list10.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list10.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>10</h3>
@@ -1856,7 +2134,7 @@
                                 <div class="swiper-slide swiper-slide11">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list11.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list11.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>11</h3>
@@ -1880,7 +2158,7 @@
                                 <div class="swiper-slide swiper-slide12">
                                     <div class="poster">
                                         <div class="img-box">
-                                            <img src="./images/clasic-list12.jpg" alt="클래식소사이어티">
+                                            <img src="./images/clasic-list12.jpg" alt="나일강의 죽음">
                                         </div>
                                         <div class="movie-num">
                                             <h3>12</h3>
@@ -1910,38 +2188,173 @@
                 <div class="movie-list-nav">
                     <ul>
                         <li>
-                            <a href="#">
-                                <input type="text" placeholder="영화명을 입력해 주세요">
-                                <i class="fas fa-search"></i>
+                            <a href="#" onclick="return false">
+                                <i class="fas fa-search" title="영화명을 입력하세요"></i>
+                                <input type="text" placeholder="영화명을 입력해 주세요">                                
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span>상영시간표</span>
-                                <i class="fas fa-calendar-alt"></i>
+                            <a href="#" class="in">
+                                <i class="fas fa-calendar-alt" title="상영시간표"></i>
+                                <span>상영시간표</span>                                
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span>박스오피스</span>
-                                <i class="fas fa-film"></i>
+                            <a href="#" class="in">
+                                <i class="fas fa-film" title="박스오피스"></i>
+                                <span>박스오피스</span>                                
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span>빠른예매</span>
-                                <i class="fas fa-ticket-alt"></i>
+                            <a href="#" class="in">
+                                <i class="fas fa-ticket-alt" title="빠른예매"></i>
+                                <span>빠른예매</span>                                
                             </a>
                         </li>
                     </ul>
                 </div>
+
+                <div class="mouse-move"></div>
+
             </div>
         </section>
         <section class="sec benefit">
-            <div class="container"></div>
+            <div class="bg-benefit"></div>
+            <div class="container">
+                <h2 class="sec-tit">혜택</h2>
+                <div class="benefit-contents">
+                    <div class="benefit-list">
+                        <div class="benefit-slider01">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit01-01.jpg" alt="슬라이드광고1">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit02-01.jpg" alt="슬라이드광고2">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit03-01.jpg" alt="슬라이드광고3">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit04-01.jpg" alt="슬라이드광고4">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="controls-box">
+                                    <!-- If we need scrollbar -->
+                                    <div class="scrollbar scrollbar0" id="scrollbar">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span id="move-span">왓다갔다 하는애</span>      
+                                    </div>
+
+                                    <!-- navigation btn -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
+                                    <!-- button play/stop -->
+                                    <div class="btn-play-pause">                                        
+                                        <i class="fas fa-play play active"></i> 
+                                        <i class="fas fa-pause pause"></i>                                        
+                                    </div>
+
+                                    <!-- pagenation btn -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="benefit-slider02">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit01-02.jpg" alt="슬라이더1-2">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit02-02.jpg" alt="슬라이더2-2">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit03-02.jpg" alt="슬라이더3-2">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="./images/benefit04-02.jpg" alt="슬라이더4-2">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="benefit-banner01">
+                            <a href="#" class="active"><img src="./images/benefit-banner01.jpg" alt="베네핏 광고1"></a>
+                            <a href="#"><img src="./images/benefit-banner02.jpg" alt="베네핏 광고2"></a>
+                            <a href="#"><img src="./images/benefit-banner03.jpg" alt="베네핏 광고3"></a>
+                            <a href="#"><img src="./images/benefit-banner04.jpg" alt="베네핏 광고4"></a>
+                        </div>
+                        <div class="benefit-banner02">
+                            <a href="#" class="active"><img src="./images/benefit-banner11.jpg" alt="베네핏 광고5"></a>
+                            <a href="#"><img src="./images/benefit-banner12.jpg" alt="베네핏 광고6"></a>
+                            <a href="#"><img src="./images/benefit-banner13.jpg" alt="베네핏 광고7"></a>
+                        </div>
+                    </div>
+                    <div class="benefit-ad img-box">
+                        <a href="#">
+                            <img src="./images/banner-mid.jpg" alt="현대해상 중간배너">
+                        </a>
+                        <div class="ad">ad</div>
+                    </div>    
+                </div>
+                <div class="benefit-nav">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-gem"></i></a>
+                            <a href="#">VIP LAUNGE</a>
+                        </li>                       
+                        <li>
+                            <a href="#"><i class="fas fa-user"></i></a>
+                            <a href="#">멤버십</a>
+                        </li>                       
+                        <li>
+                            <a href="#"><i class="fas fa-address-card"></i></a>
+                            <a href="#">할인카드</a>
+                        </li>                       
+                        <li>
+                            <a href="#"><i class="fas fa-gift"></i></a>
+                            <a href="#">이벤트</a>
+                        </li>                       
+                        <li>
+                            <a href="#"><i class="fas fa-wine-glass"></i></a>
+                            <a href="#">스토어</a>
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+           
         </section>
+
         <section class="sec curation">
-            <div class="container"></div>
+            <div class="container">
+                <h2 class="sec-tit">큐레이션</h2>
+                <div class="curation-contents">
+                    <div class="select-curation">큐</div>
+                    <div class="curation-content">레이</div>
+                </div>
+            </div>
         </section>
         <section class="sec megainfo">
             <div class="container"></div>
@@ -1955,40 +2368,38 @@
     </section>
 
 
-    <!-- jquery -->
+
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- jquery-cookie -->
+    <!-- jQuery cookie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- Swiper js -->
+    <!-- swiper Js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.3/swiper-bundle.min.js" integrity="sha512-+1MtN0rwSlEnZo0agG99mCQChlBtfe8hyHItwWtgiD33mWvaNVZkZB9yX2S92z5HgDg1+EcitjutZejbHUcZAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script>
-        // btn-modal-close
+        // modal close event
         $('.btn-modal-close').on({
             'click':function(){
                 $('.modal-popup').css('display','none');
-                if($('.modal-cookie input').is(':checked')){
-                    $.cookie('modal-popup','no', {expires: 1});
+                if($('.modal-cookie input').is(':checked')){                    
+                    $.cookie('modal-popup', 'no', { expires: 1 });
                 }
             }
         })
 
         if($.cookie('modal-popup') == 'no'){
-            $('.modal-popup').css('display','none')
+            $('.modal-popup').css('display','none');
         }else{
-            $('.modal-popup').css('display','block')
+            $('.modal-popup').css('display','block');
         }
 
-        // banner-top-close
+        // banner top close event
         $('.btn-banner-top-close').on({
             'click':function(){
-                $('.banner-top').css('display','none');
+                $('.banner-top').slideUp();
             }
         })
 
-        // sub-nav call
+        // sub-nav call event
         $('.nav>ul>li').on({
             'mouseover':function(){
                 $('.sub-nav').css('display','none');
@@ -1996,30 +2407,35 @@
             }
         });
 
-        // sub nav close
+        // sub nav close event
         $('.sub-nav').on({
             'mouseout':function(){
                 $(this).css('display','none');
             }
         })
-        
-         // mo quick menu call
-         $('.btn-mo-quick').on({
+
+        // mo quick menu call event
+        $('.btn-mo-quick').on({
             'click':function(){               
                 $('.wrap,.quick-nav').toggleClass('show-quick');
             }
         })
 
-        // mo nav call
+
+        // mo nav call event
         $('.btn-mo-nav').on({
             'click':function(){               
                 $('.wrap,.nav').toggleClass('show-nav');
             }
         })
-   
+
         // window resize event
         $(window).resize(function(){
             let winWidth = $(this).width();
+            // if(winWidth<=1200){
+            //     let posWidth = $('.poster').width();
+            //     $('.poster').css('height',posWidth*1.42);
+            // }
         })
 
         // movie selector event
@@ -2030,62 +2446,127 @@
                 $(this).addClass('active');
                 let acIdx = $('.movie-list .list-tit ul li').index(this);
                 $('.movie-list article').eq(acIdx).addClass('active');
+                
             }
         })
 
-        // swiperJs
-        var swiper = new Swiper(".swiper", {
+
+        // movie-list swiperJs
+        var swiper = new Swiper(".movie-list .swiper", {
             slidesPerView: 4.2,
             spaceBetween: 20,           
             breakpoints: {
                 0: {
                     slidesPerView: 1.5, 
-                    spaceBetween: 40,                   
+                    spaceBetween: 40,                  
                 },
                 768: {
                     slidesPerView: 2.5,
-                    spaceBetween: 36,  
+                    spaceBetween: 36,   
                 },
                 1024: {
                     slidesPerView: 3.5,
-                    spaceBetween: 30, 
+                    spaceBetween: 30,   
                 },
                 1200: {
                     slidesPerView: 4.2,
                 },
             },
         });
-   
-        let filmImg = document.querySelectorAll('.film img');
-        for(let cnt=0; cnt<filmImg.length; cnt++){
-            if(cnt<9){
-                filmImg[cnt].setAttribute('src','./images/film-list0' + filmSrc + (cnt+1) + '.jpg');
-            }else{
-                filmImg[cnt].setAttribute('src','./images/film-list' + filmSrc + (cnt+1) + '.jpg');
+
+        // benefit slider swiperJs
+        var ben01 = new Swiper(".benefit-slider01 .swiper",{ 
+            allowTouchMove:false,
+            effect:'fade',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop:true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+        })
+        // benefit-slider02 swiperJs
+        var ben02 = new Swiper(".benefit-slider02 .swiper",{                       
+            direction:'horizontal',
+            allowTouchMove:false,
+            loop:true,
+        })
+
+       
+        ben02.controller.control = ben01;
+        ben01.controller.control = ben02;
+
+        // benefit random banner01
+        let acBanNum1 = Math.floor(Math.random()*4);
+        let acBan1 = $('.benefit-banner01 a');
+        acBan1.removeClass('active');
+        acBan1.eq(acBanNum1).addClass('active');
+
+        // benefit random banner02
+        let acBanNum2 = Math.floor(Math.random()*3);
+        let acBan2 = $('.benefit-banner02 a');
+        acBan2.removeClass('active');
+        acBan2.eq(acBanNum2).addClass('active');
+
+
+        // btn play/stop
+        $('.btn-play-pause i').on({
+            'click':function(){
+                $('.btn-play-pause i').toggleClass('active');
+                if($('.play').hasClass('active')){
+                    ben01.autoplay.stop();
+                }else{
+                    ben01.autoplay.start();
+                }
+            }
+        })
+
+        // slide-changed
+        ben01.on('slideChange',function(){
+            let indexNum = (ben01.realIndex);
+            if(indexNum == 0){
+                $('#move-span').css('left','0');
+            }else if(indexNum == 1){
+                $('#move-span').css('left','25%');
+            }else if(indexNum == 2){
+                $('#move-span').css('left','50%');
+            }else if(indexNum == 3){
+                $('#move-span').css('left','75%');  
             } 
-        }
-
-        
-        // let expImg = $('.movie-exp img');
-        // let filmImg = $('.film img');
-        // let clasicImg = $('.clasic img');
-
-        // setList(expImg,'exp');
-        // setList(filmImg,'film');
-        // setList(clasicImg,'clasic');
-        
-
-        // function setList(target,stSrc){
-        //     for(let cnt=0;cnt<target.length;cnt++){
-        //         if(cnt<9){
-        //             $(target).eq(cnt).attr('src','./images/' + stSrc + '-list0' + (cnt+1) + '.jpg');
-        //         }else{
-        //             $(target).eq(cnt).attr('src','./images/'+ stSrc + '-list' + (cnt+1) + '.jpg');
-        //         }
-        //     }
+        })
+       
+          // let filmImg = document.querySelectorAll('.film img');
+        // for(let cnt=0; cnt<filmImg.length; cnt++){
+        //     if(cnt<9){
+        //         filmImg[cnt].setAttribute('src','./images/film-list0' + filmSrc + (cnt+1) + '.jpg');
+        //     }else{
+        //         filmImg[cnt].setAttribute('src','./images/film-list' + filmSrc + (cnt+1) + '.jpg');
+        //     } 
         // }
-   
-   
+        
+        let expImg = $('.movie-exp img');
+        let filmImg = $('.film img');
+        let clasicImg = $('.clasic img');
+
+        setList(expImg,'exp');
+        setList(filmImg,'film');
+        setList(clasicImg,'clasic');
+        
+
+
+        function setList(target,stSrc){
+            for(let cnt=0;cnt<target.length;cnt++){
+                if(cnt<9){
+                    $(target).eq(cnt).attr('src','./images/' + stSrc + '-list0' + (cnt+1) + '.jpg');
+                }else{
+                    $(target).eq(cnt).attr('src','./images/'+ stSrc + '-list' + (cnt+1) + '.jpg');
+                }
+            }
+        }
+        
     </script>
 </body>
 </html>
