@@ -588,6 +588,8 @@
         .swiper-pagination{
             width:10%;
         }
+
+        /* benefit-nav */
         .benefit-nav ul{
             display:flex;
             flex-flow:row nowrap;
@@ -609,9 +611,10 @@
             font-size:3em;
         }
 
-        /* curation */
+        /* curation */   
         .curation{
             background-color: #252451;
+            color: #fff;
         }
         .curation h2{
             color: #fff;
@@ -625,11 +628,220 @@
         .select-curation{
             flex: 1;
             margin-right: 50px;
-            background-color: red;
         }
         .curation-content{
-            flex: 2;
-            background-color: green;
+            flex: 3;
+            max-width: 71.76724137931034%;
+        }
+        .curation .poster{
+            overflow: initial;
+            cursor: pointer;
+        }
+        .curation .poster .img-box{
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .poster-over{
+            position: absolute;
+            left: -10px;
+            top: -5px;
+            z-index: 101;
+            padding: 8px 10px 36px;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            background-color: #037b94;
+            text-transform:uppercase;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #fff;
+        }
+        .curation-content-tit{
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 20px;
+        }
+        .curation-content h3{
+            font-size: 1.4em;
+        }
+        .curation-content h4{
+            font-size: 2.6em;
+        }
+        .curation-content-txt{
+            margin-bottom: 20px;
+        }
+        .curation-content-txt h5{
+            margin-bottom: 1.1em;
+        }
+        .curation-content-poster .poster{
+            margin-top: 5px;
+        }
+        .curation .swiper-slide img{
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .movie-level{
+            position: absolute;
+            left: 10px;
+            top: -5px;
+
+            width: 30px;
+            background-color: #d81a0d;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .movie-level::after{
+            content: '';
+            display: block;
+            /* border-top: 30px solid red;
+            border-right: 30px solid transparent !important; */
+        }
+        .curation-swiper p{
+            text-align: center;
+        }
+
+        /* megainfo-list */
+        .megainfo-list ul{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 20px;
+        }
+        .megainfo-list ul li{
+            border-radius: 6px;
+            overflow: hidden;
+            filter: grayscale(1) opacity(0.5);
+            transition: 0.3s;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        }
+        .megainfo-list ul li:hover{
+            filter: grayscale(0) opacity(1);
+        }
+
+        /* notice */
+        .notice-container{
+            margin:50px 0 46px;
+            border-top:1px solid rgba(0,0,0,0.3);
+            border-bottom:1px solid rgba(0,0,0,0.3);
+            padding:20px 0;            
+        }
+        .notice-container ul{
+            display:grid;
+            grid-template-columns:1fr 9fr 1fr 1fr;
+        }
+        .notice-container ul li{
+            border-right:1px solid rgba(0,0,0,0.3);
+            text-align:center;
+        }
+        .notice-container ul li.cinema,
+        .notice-container ul li.notice-tit{
+            text-align:left;
+        }
+        .notice-container ul li.notice-tit{
+            padding-left:1em;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+        }
+        .notice-container ul li.notice-tit:hover{
+            font-weight:700;
+        }
+        .notice-container ul li.notice-tit span{
+            font-weight:700;
+            color:#503396;
+        }
+        .notice-container ul li:last-child{
+            border-right:none;
+        }
+
+        /* megainfo-nav */
+        .megainfo-nav ul{
+            display:grid;
+            grid-template-columns:repeat(6,1fr);            
+        }
+        .megainfo-nav ul li{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+        }
+        .megainfo-nav ul li p{
+            margin-top: 5px;
+        }
+        .megainfo-nav ul li .img-box a{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }        
+        .bg-mega01 a{
+            background-image: url(./images/ico-megainfo01.png);
+        }
+        .bg-mega02 a{
+            background-image: url(./images/ico-megainfo02.png);
+        }
+        .bg-mega03 a{
+            background-image: url(./images/ico-megainfo03.png);
+        }
+        .bg-mega04 a{
+            background-image: url(./images/ico-megainfo04.png);
+        }
+        .bg-mega05 a{
+            background-image: url(./images/ico-megainfo05.png);
+        }
+        .bg-mega06 a{
+            background-image: url(./images/ico-megainfo06.png);
+        }
+
+        /* banner-bottom */
+        .wrap .banner-bottom{
+            padding-bottom: 20px;
+        }
+        .banner-bottom .img-box{
+            position: relative;
+        }
+        .footer{
+            padding: 30px;
+            background-color: #352461;
+            color: #fff;
+        }
+        .footer .in:first-child{
+            margin-bottom: 20px;
+        }
+        .footer-nav{
+            float: left;
+        }
+        .footer-nav li{
+            display: inline-block;
+            margin-right: 1em;
+        }
+        .footer-nav li strong{
+            font-weight: 600;
+        }
+        .cinema-search{
+            float:right;           
+            border:1px solid rgba(255,255,255,0.8);
+            padding:10px 30px;
+            border-radius:20px;
+            cursor: pointer;
+        }
+        .footer-logo{
+            width: 140px;
+            margin-right: 20px;
+            opacity: 0.5;
+        }
+        .footer-logo,.address{
+            float: left;
+        }
+        .address{
+            font-style: normal;
+        }
+        .sns-list{
+            float: right;
+        }
+        .sns-list li{
+            display: inline-block;
         }
 
         /* 브라우저별 */
@@ -646,7 +858,6 @@
                 margin-top:-13px;
             }
         }
-
         @media (max-width:1024px){
             h1{               
                 left:20px;                
@@ -658,8 +869,12 @@
             .quick-nav>ul:first-child{
                 margin-right:20px;
             }
-            .nav>ul:first-child{margin-right:60px;}
-            .nav>ul>li{margin-right:60px;}
+            .nav>ul:first-child{
+                margin-right:60px;
+            }
+            .nav>ul>li{
+                margin-right:60px;
+            }
             .sub-nav ul{
                 justify-content: flex-end;
             }
@@ -711,8 +926,19 @@
             .movie-list-nav span{
                 display:none;
             }
+            .select-curation{
+                display: none;
+            }
+            .curation-content{
+                max-width: 100%;
+            }
+            .notice-container ul{
+                grid-template-columns: 1fr 8.5fr 1.5fr 1fr;
+            }
+            .footer-nav li:nth-child(2n){
+                display: none;
+            }
         }
-
         @media (max-width:840px){
             .wrap{
                 position:absolute;
@@ -816,8 +1042,34 @@
             .benefit-ad{
                 display: none;
             }
+            .megainfo-list ul{
+                gap:3%;
+            }
+            .megainfo-list ul li{
+                border-radius:50%;
+            }
+            .notice-container ul{
+                grid-template-columns:8fr 2.5fr 1.5fr;
+            }
+            .notice-container ul li.cinema{
+                display:none;
+            }
+            .notice-container ul li.notice-tit{
+                padding-left:0;
+            }
+            .megainfo-nav p{
+                display: none;
+            }
         }
-
+        @media (max-width:640px){
+            .megainfo-list ul{
+                grid-template-columns:repeat(3,1fr);
+                gap:40px;
+            }
+            .footer-nav,.footer-logo,.address{
+                margin-bottom:20px;
+            }
+        }
         @media (max-width:490px){
             .movie-list .list-tit ul li,            
             .movie-list .list-tit ul li:hover,
@@ -840,6 +1092,25 @@
             }
             .benefit-banner02{
                 display: none;
+            }
+            .benefit-nav a i{
+                font-size:2.5em;
+            }
+            .benefit-nav a:last-child{
+                font-size: 0.9em;
+            }
+            .benefit-nav span{
+                display: none;
+            }
+            .notice-container ul{
+                grid-template-columns: 10fr 2fr;
+            }
+            .notice-container ul li.write-date{
+                display:none;
+            }
+            .megainfo-nav ul li .img-box a{
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
@@ -2325,48 +2596,226 @@
                 <div class="benefit-nav">
                     <ul>
                         <li>
-                            <a href="#"><i class="fas fa-gem"></i></a>
-                            <a href="#">VIP LAUNGE</a>
+                            <a href="#"><i class="fas fa-gem" title="VIP LAUNGE"></i></a>
+                            <a href="#">VIP <span>LAUNGE</span></a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-user"></i></a>
+                            <a href="#"><i class="fas fa-user" title="멤버십"></i></a>
                             <a href="#">멤버십</a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-address-card"></i></a>
+                            <a href="#"><i class="fas fa-address-card" title="할인카드"></i></a>
                             <a href="#">할인카드</a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-gift"></i></a>
+                            <a href="#"><i class="fas fa-gift" title="이벤트"></i></a>
                             <a href="#">이벤트</a>
                         </li>                       
                         <li>
-                            <a href="#"><i class="fas fa-wine-glass"></i></a>
+                            <a href="#"><i class="fas fa-wine-glass" title="스토어"></i></a>
                             <a href="#">스토어</a>
                         </li>                       
                     </ul>
                 </div>
-            </div>
-           
+            </div>      
         </section>
-
         <section class="sec curation">
             <div class="container">
-                <h2 class="sec-tit">큐레이션</h2>
+                <h2 class="sec-tit sec-tit-light">
+                    큐레이션
+                </h2>
                 <div class="curation-contents">
-                    <div class="select-curation">큐</div>
-                    <div class="curation-content">레이</div>
+                    <div class="select-curation">
+                        <div class="poster">
+                            <div class="img-box">
+                                <img src="./images/curation-list01.jpg" alt="큐레이션1">
+                            </div>
+                            <div class="poster-over">
+                                <p>
+                                    megabox<br>
+                                    classic<br>
+                                    society
+                                </p>
+                            </div>
+                        </div>
+                        <div class="poster-bottom">
+                            <button type="button">상세정보</button>
+                            <button type="button">예매</button>
+                        </div>
+                    </div>
+                    <div class="curation-content">
+                        <div id="curation-ajax">
+                            큐레이션의 내용이 로드될 곳
+                        </div>
+                        <div class="curation-content-poster">
+                            <div class="swiper curation-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="poster">
+                                            <div class="img-box">
+                                                <img src="./images/curation-list01.jpg" alt="큐레이션1">
+                                            </div>
+                                            <div class="movie-level">
+                                                F
+                                            </div>
+                                        </div>
+                                        <p>어나더 리스트</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="poster">
+                                            <div class="img-box">
+                                                <img src="./images/curation-list02.jpg" alt="큐레이션2">
+                                            </div>
+                                            <div class="movie-level">
+                                                F
+                                            </div>
+                                        </div>
+                                        <p>드라이브 마이카</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="poster">
+                                            <div class="img-box">
+                                                <img src="./images/curation-list03.jpg" alt="큐레이션3">
+                                            </div>
+                                            <div class="movie-level">
+                                                F
+                                            </div>
+                                        </div>
+                                        <p>미싱타는 여자들</p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="poster">
+                                            <div class="img-box">
+                                                <img src="./images/curation-list04.jpg" alt="큐레이션4">
+                                            </div>
+                                            <div class="movie-level">
+                                                F
+                                            </div>
+                                        </div>
+                                        <p>더 마더</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="sec megainfo">
-            <div class="container"></div>
+            <div class="container list-container">
+                <h2 class="sec-tit">메가박스 안내</h2>
+                <div class="megainfo-list">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./images/megainfo01.png" alt="mega01"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/megainfo02.png" alt="mega02"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/megainfo03.png" alt="mega03"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/megainfo04.png" alt="mega04"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/megainfo05.png" alt="mega05"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/megainfo06.png" alt="mega06"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="notice-container">
+                <div class="container">
+                    <ul>
+                        <li class="cinema">메가박스</li>
+                        <li class="notice-tit"><a href="#"><span>[이벤트]</span> [당첨자공지] 내통장결제 관람권 프로모션</a></li>
+                        <li class="write-date">2022-02-10</li>
+                        <li><a href="#">더보기</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container megainfo-nav">
+                <ul>
+                    <li>
+                        <div class="img-box bg-mega01" title="고객센터"><a href="#"></a></div>
+                        <p><a href="#">고객센터</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega02" title="자주 묻는 질문"><a href="#"></a></div>
+                        <p><a href="#">자주 묻는 질문</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega03" title="1:1문의"><a href="#"></a></div>
+                        <p><a href="#">1:1 문의</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega04" title="단체/대관문의"><a href="#"></a></div>
+                        <p><a href="#">단체/대관문의</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega05" title="분실물 문의/접수"><a href="#"></a></div>
+                        <p><a href="#">분실물 문의/접수</a></p>
+                    </li>
+                    <li>
+                        <div class="img-box bg-mega06" title="더 부티크 프라이빗 대관예매"><a href="#"></a></div>
+                        <p><a href="#">더 부티크 프라이빗<br>대관예매</a></p>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="sec banner-bottom">
-            <div class="container"></div>
+            <div class="container">
+              <div class="img-box">
+                  <a href=""><img src="./images/banner-bottom.jpg" alt="현대해상하단광고"></a>
+                  <div class="ad">AD</div>
+              </div>
+            </div>
         </section>
         <footer class="footer">
-            <div class="container"></div>
+            <div class="container">
+                <div class="in clearfix">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">인재채용</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                            <li><a href="#">제휴/광고/부대사업문의</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">위치기반서비스 이용약관</a></li>
+                            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                            <li><a href="#">윤리경영</a></li>
+                        </ul>
+                    </div>
+                    <div class="cinema-search">
+                        <i class="fas fa-search"></i>
+                        <span>극장찾기</span>
+                    </div>
+                </div>
+                <div class="in clearfix">
+                    <div class="footer-logo">
+                        <a href="./index.html"><img src="./images/logo-white.png" alt="시작페이지로"></a>
+                    </div>
+                    <address class="address">
+                        서울특별시 마포구 월드컵로 240, 지상2층(성산동, 월드컵주경기장) ARS 1544-0070
+                        <br>
+                        대표자명 홍정인 · 개인정보보호책임자 공성진 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 제 2020-서울마포-4545 호
+                        <br>
+                        COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved     
+                    </address>
+                    <div class="sns-list">
+                        <ul>
+                            <li><a href="#"><img src="./images/ico-twitter.png" alt="twitter" title="twitter"></a></li>
+                            <li><a href="#"><img src="./images/ico-facebook.png" alt="facebook" title="facebook"></a></li>
+                            <li><a href="#"><img src="./images/ico-instagram.png" alt="instagram" title="instagram"></a></li>
+                            <li><a href="#"><img src="./images/ico-googleplay.png" alt="googleplay" title="googleplay"></a></li>
+                            <li><a href="#"><img src="./images/ico-appstore.png" alt="appstore" title="appstore"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
     </section>
 
@@ -2453,26 +2902,25 @@
             }
         })
 
-
         // movie-list swiperJs
         var swiper = new Swiper(".movie-list .swiper", {
-            slidesPerView: 4.2,
+            slidesPerView: 4.5,
             spaceBetween: 20,           
             breakpoints: {
                 0: {
-                    slidesPerView: 1.5, 
+                    slidesPerView: 1.8, 
                     spaceBetween: 40,                  
                 },
                 768: {
-                    slidesPerView: 2.5,
+                    slidesPerView: 2.9,
                     spaceBetween: 36,   
                 },
                 1024: {
-                    slidesPerView: 3.5,
+                    slidesPerView: 4.1,
                     spaceBetween: 30,   
                 },
                 1200: {
-                    slidesPerView: 4.2,
+                    slidesPerView: 4.5,
                 },
             },
         });
@@ -2570,6 +3018,43 @@
             }
         }
         
+     
+      // curation swiper
+      const cuSwiper = new Swiper('.curation .swiper',{
+            spaceBetween:20,
+            breakpoints:{
+                0:{
+                    slidesPerView:1.8,
+                },
+                640:{
+                    slidesPerView:2.8,
+                },
+                960:{
+                    slidesPerView:3.8,
+                },
+                1200:{
+                    slidesPerView:4,
+                }
+            }
+        });
+    
+        // curation poster event
+        let cuConImg = $('.curation-content-poster .poster img');
+        let cuSelImg = $('.select-curation .poster img');
+        cuConImg.on({
+            'click':function(){
+                let cuImgSrc = $(this).attr('src');
+                cuSelImg.attr('src',cuImgSrc);
+                let selectIdx = cuConImg.index(this);                
+                cuLoad(selectIdx);
+            }
+        })
+
+        cuLoad(0);
+
+        function cuLoad(idxNum){
+            $('#curation-ajax').load('curation.html #curation0' + idxNum);
+        }
     </script>
 </body>
 </html>
