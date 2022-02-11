@@ -137,12 +137,6 @@
             }
         }
         @media (max-width:840px){
-            
-            
-           
-
-
-
             .wrap{
                 position:absolute;
                 left:0;
@@ -162,17 +156,14 @@
             .banner-top{
                 display:none;
             }
-
-
-
-
-
             .header{
                 position: fixed;
                 left: 0;
                 right: 0;
                 top: 0;
                 border-bottom: none;
+                padding: 0;
+                background-color: #120d3c;
             }
             .header .desk-container{
                 display:none;
@@ -184,24 +175,14 @@
                 padding-top: calc(40px + 55px);
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
             .benefit-list{
                 width:100%;
             }
             .benefit-ad{
                 display:none;
             }
+
+
 
             .megainfo-list ul{
                 gap:3%;
@@ -220,6 +201,13 @@
             }
             .megainfo-nav p{
                 display: none;
+            }
+
+            .bnb{
+                display: block;
+            }
+            .footer{
+                padding-bottom: 110px;
             }
         }
         @media (max-width:640px){
@@ -272,6 +260,13 @@
             .megainfo-nav ul li .img-box a{
                 width: 40px;
                 height: 40px;
+            }
+            .bnb .icons{
+                width: 30px;
+                height: 30px;
+            }
+            .bnb span{
+                font-size: 0.8em;
             }
         }
     </style>
@@ -401,7 +396,7 @@
                 <h1><a href="./index.html"><img src="./m-images/m-logo-white.png" alt="시작페이지로 이동"></a></h1>
                 <div class="ticketing">
                     <a href="#">
-                        <i class="icons icon-ticket">예매</i>
+                        <i class="icons icon-ticket" id="btn-ticket">예매</i>
                     </a>
                 </div>
                 <div class="m-r-items">
@@ -412,6 +407,54 @@
                         <i class="icons icon-m-burger">메뉴</i>
                     </a>
                 </div>
+            </div>
+            <div class="container m-login">
+                <h2>로그인</h2>
+                <form>
+                    <input type="text" placeholder="아이디">
+                    <input type="password" placeholder="비밀번호">
+                    <label>
+                        <input type="checkbox">
+                        <span class="save-id">
+                            <i class="icons m-ico-check"></i>      
+                        </span>
+                        &nbsp;
+                        아이디저장
+                    </label>   
+                    <div class="e-login">
+                        <span>휴대폰 간편로그인</span>
+                        <span>광고</span>
+                    </div>
+                    <button type="button">로그인</button>
+                    <ul>
+                        <li>
+                            <a href="#">ID/PW찾기</a>
+                        </li>
+                        <li>
+                            <a href="#">회원가입</a>
+                        </li>
+                        <li>
+                            <a href="#">비회원 예매확인</a>
+                        </li>
+                    </ul>
+                    <div class="web-login">
+                        <i class="icons m-ico-facebook"></i>
+                        <i class="icons m-ico-naver"></i>
+                        <i class="icons m-ico-kakao"></i>
+                        <i class="icons m-ico-payco"></i>
+                    </div>         
+                </form>
+                <div class="ad-box">
+                    <div class="img-box">
+                        <a href="#"><img src="./m-images/login-m-banner.jpg" alt="광고"></a>
+                    </div>
+                </div>
+                <div class="btn-close-login">
+
+                </div>
+            </div>
+            <div class="container m-nav">
+                네비
             </div>
         </header>
         <section class="sec movie-list">
@@ -1953,7 +1996,38 @@
         </section>
         <section class="bnb">
             <div class="container bnb-container">
-                
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-home"></i>
+                            <span>홈</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-store"></i>
+                            <span>스토어</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-reserve"></i>
+                            <span>예매</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-event"></i>
+                            <span>이벤트</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icons m-ico-mymega"></i>
+                            <span>MY</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
         <footer class="footer">
@@ -2171,6 +2245,7 @@
             } 
         })
        
+
           // let filmImg = document.querySelectorAll('.film img');
         // for(let cnt=0; cnt<filmImg.length; cnt++){
         //     if(cnt<9){
@@ -2179,7 +2254,6 @@
         //         filmImg[cnt].setAttribute('src','./images/film-list' + filmSrc + (cnt+1) + '.jpg');
         //     } 
         // }
-        
         let expImg = $('.movie-exp img');
         let filmImg = $('.film img');
         let clasicImg = $('.clasic img');
@@ -2188,7 +2262,6 @@
         setList(filmImg,'film');
         setList(clasicImg,'clasic');
         
-
 
         function setList(target,stSrc){
             for(let cnt=0;cnt<target.length;cnt++){
@@ -2237,6 +2310,32 @@
         function cuLoad(idxNum){
             $('#curation-ajax').load('curation.html #curation0' + idxNum);
         }
+
+
+        // 모바일 이벤트
+        // $('#btn-ticket').on({
+        //     'click':loadLogin,      
+        // })
+        $('#btn-ticket').click(loadLogin);
+        
+        // $('.btn-close-login').on({
+        //     'click':closeLogin,
+        // })
+
+
+
+        function loadLogin(){
+            let logCfm = confirm('로그인 후 이용가능 합니다.\n로그인 하시겠습니까?');
+            if(logCfm){
+                $('.m-login').show(0);
+            }
+            $('body').css('overflow','hidden');
+            $('.m-login').css('overflow-y','scroll');
+        }
+        function closeLogin(){
+            $('.m-login').hide(0);
+        }
+
     </script>
 </body>
 </html>
