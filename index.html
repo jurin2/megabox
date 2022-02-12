@@ -2091,7 +2091,7 @@
     <script>
 
         benefitBanner01();
-        // benefitBanner02();
+        benefitBanner02();
 
         // modal close event
         $('.btn-modal-close').on({
@@ -2131,21 +2131,7 @@
             }
         })
 
-        // mo quick menu call event
-        $('.btn-mo-quick').on({
-            'click':function(){               
-                $('.wrap,.quick-nav').toggleClass('show-quick');
-            }
-        })
-
-
-        // mo nav call event
-        $('.btn-mo-nav').on({
-            'click':function(){               
-                $('.wrap,.nav').toggleClass('show-nav');
-            }
-        })
-
+       
         // window resize event
         $(window).resize(function(){
             let winWidth = $(this).width();
