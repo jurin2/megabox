@@ -388,12 +388,13 @@ input[type="checkbox"]:checked + .save-id .m-ico-check{
     width: 80%;
     margin: 0 auto;
 }
-.btn-close-login{
+.btn-close-login,.btn-close-nav{
     position: absolute;
     right: 20px;
     top: 20px;
     width: 20px;
     height: 20px;
+    text-indent: -99999;
     cursor: pointer;
 }
 .btn-close-login::before,
@@ -415,7 +416,157 @@ input[type="checkbox"]:checked + .save-id .m-ico-check{
 }
 
 
+.m-nav{
+    color: #fff;    
+    padding: 0;
+}
+.m-nav .login-top{
+    padding: 20px;
+    background-color: #140a36;
+}
+.m-nav h2{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.m-nav .btn-close-nav{
+    text-indent: -999999px;
+}
+.btn-close-nav::before,
+.btn-close-nav::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.btn-close-nav::before{
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.btn-close-nav::after{
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.m-nav .logbox,.m-nav .n-member{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.m-nav .logbox ul li{
+    float: left;
+    position: relative;
+    padding-right: 10px;
+    margin-right: 10px;
 
+}
+.m-nav .logbox ul li:first-child::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #fff;
+    margin-top: -4px;
+}
+.m-nav .login-bottom{
+    height: 100%;
+    color: #666;
+}
+.quick-menu{
+    background-color: #fff;
+    width: auto;
+
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.quick-menu h3{
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #6437bf;
+    margin: 16px 0;
+}
+.quick-menu .quick-list{
+    width: 100%;
+}
+.quick-menu .quick-list ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.quick-menu .quick-list .img-box{
+    width: 60px;
+    height: 60px;
+    padding: 9px;
+    margin: 0 auto 6px;
+    border: 1px solid #c3a6ff;
+    border-radius: 50%;
+}
+.quick-menu .quick-list .img-box img{
+    width: 40px;
+}
+.quick-menu .lg-notice{
+    width: 100%;
+    height: 50px;
+    background-color: #f1faff;
+    color: #14b9cb;
+    font-size: 13px;
+    line-height: 50px;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+.quick-menu .lg-notice .ico-rnb-notice{
+    width: 24px;
+    height: 24px;
+    background-image: url(../m-images/ico-rnb-notice.png);
+}
+.quick-menu .lg-info{
+    float: right;
+    line-height: 42px;
+}
+.quick-menu .lg-info li{
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.quick-menu .lg-info li:nth-child(2)::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    margin-top: -4px;
+}
+.quick-menu .sns-info{
+    width: 100%;
+    height: 42px;
+
+}
+.quick-menu .sns-info i{
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+}
+.quick-menu .sns-info .sns-ic-facebook{
+    background-image: url(../m-images/sns-ic-facebook.png);
+}
+.quick-menu .sns-info .sns-ic-youtube{
+    background-image: url(../m-images/sns-ic-youtube.png);
+}
+.quick-menu .sns-info .sns-ic-insta{
+    background-image: url(../m-images/sns-ic-insta.png);
+}
 
 
 /* bg-box */
@@ -443,7 +594,7 @@ input[type="checkbox"]:checked + .save-id .m-ico-check{
     right:0;
     top:0;
     bottom:0;
-    background:url('/images/patten.png') repeat left top;
+    background:url('../images/patten.png') repeat left top;
     opacity:0.1;
 }
 
