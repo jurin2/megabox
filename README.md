@@ -4,7 +4,7 @@
 [![megabox](https://github.com/jurin2/megabox/blob/6620f75de713df2a863b5cd6924fa6d1ec10fad0/readme-images/megabox-readme.jpg)](https://jurin2.github.io/megabox)
 <br><br> 
 
-## 주요기능
+## 설명
 ### 웹표준을 준수하여 메가박스 비반응형 페이지를 반응형으로 변경  
 <img src="/readme-images/megabox-readme.JPG" width="70%" alt="메가박스 랜딩페이지"/> <img src="/readme-images/megabox-mobile.JPG" width="20%" alt="메가박스 반응형 모바일 페이지"/>  
 <br>
