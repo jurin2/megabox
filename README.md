@@ -15,7 +15,12 @@ HTML, CSS, JavaScript, Jquery를 공부하면서 만든 반응형으로 만든 �
 <img src="/readme-images/megabox-readme.JPG" width="70%" alt="메가박스 랜딩페이지"/> <img src="/readme-images/megabox-mobile.JPG" width="20%" alt="메가박스 반응형 모바일 페이지"/>
 <br><br>
   
-### 2. 영화리스트 슬라이드
+### 2. 메타 태그 등록
+#### 홈페이지의 설명, 키워드나 대표이미지, SNS 키워드 등 검색엔진최적화(SEO)에 도움되는 메타 설정
+![image](https://user-images.githubusercontent.com/89722981/165946556-f954c6f2-c922-4a29-9828-4c132adf69dc.png)
+
+  
+### 3. 영화리스트 슬라이드
 <a href="https://github.com/nolimits4web/swiper?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library"><img src="https://img.shields.io/badge/CDNJS-d96439?style=flat-square&logo=CDNJS&logoColor=white"/></a>
 #### - 자바스크립트 라이브러리 swiper를 이용한 영화리스트의 스와이핑<br>- 반응형에 따라 보여지는 영화리스트의 갯수 조절
 
@@ -47,7 +52,7 @@ let swiper = new Swiper(".movie-list .swiper", {
 </code>
 </pre>
 
-### 3. Ajax를 이용하여 큐레이션의 상세정보 내용의 빠른 전환
+### 4. Ajax를 이용하여 큐레이션의 상세정보 내용의 빠른 전환
 <img src="/readme-images/ajax.JPG" width="70%" alt="메가박스 ajax"/>
 <pre>
 <code>
