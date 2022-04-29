@@ -1,5 +1,5 @@
 # 메가박스 랜딩페이지 반응형 클론코딩
-HTML, CSS, JavaScript, Jquery를 공부하면서 만든 반응형으로 만든 메가박스 홈페이지입니다.
+HTML, CSS, JavaScript, Jquery를 공부하면서 자바스크립트 라이브러리와 제이쿼리 플러그인을 적절히 사용하여 만든 반응형 메가박스 홈페이지입니다.
 <br><br>
 
 바로가기 - [megabox](https://jurin2.github.io/megabox)
