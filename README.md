@@ -43,6 +43,7 @@ function benefitBanner01(){
 </pre>
 
 5. #### 모달팝업창 체크시 하루동안 보지않기
+바로가기 - [jquery-cookie](https://github.com/carhartl/jquery-cookie?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library)
 ##### 브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자가 도달하면 쿠키를 자동으로 삭제한다.
 <img src="/readme-images/popup.JPG" width="70%" alt="모달팝업창"/>
 <pre>
