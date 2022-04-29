@@ -1,4 +1,6 @@
-# 메가박스 랜딩페이지 반응형 클론코딩  
+# 메가박스 랜딩페이지 반응형 클론코딩
+HTML, CSS, JavaScript, Jquery를 공부하면서 만든 반응형으로 만든 메가박스 홈페이지입니다.
+<br><br>
 
 바로가기 - [megabox](https://jurin2.github.io/megabox)
 [![megabox](https://github.com/jurin2/megabox/blob/6620f75de713df2a863b5cd6924fa6d1ec10fad0/readme-images/megabox-readme.jpg)](https://jurin2.github.io/megabox)
