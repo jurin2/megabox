@@ -1,4 +1,4 @@
-# 메가박스 랜딩페이지 반응형 클론코딩
+# 메가박스 홈페이지 반응형 클론코딩
 HTML, CSS, JavaScript, Jquery를 공부하면서 자바스크립트 라이브러리와 제이쿼리 플러그인을 적절히 사용하여 만든 반응형 메가박스 홈페이지입니다.
 <br><br>
 
@@ -12,7 +12,7 @@ HTML, CSS, JavaScript, Jquery를 공부하면서 자바스크립트 라이브러
 
 ### 1. 반응형 페이지 작업
 #### 웹표준을 준수하여 메가박스 비반응형 페이지를 반응형으로 변경
-<img src="/readme-images/megabox-readme.JPG" width="70%" alt="메가박스 랜딩페이지"/> <img src="/readme-images/megabox-mobile.JPG" width="20%" alt="메가박스 반응형 모바일 페이지"/>
+<img src="/readme-images/megabox-readme.JPG" width="70%" alt="메가박스 홈페이지"/> <img src="/readme-images/megabox-mobile.JPG" width="20%" alt="메가박스 반응형 모바일 페이지"/>
 <br><br>
   
 ### 2. 메타 태그 등록
