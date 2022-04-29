@@ -15,7 +15,7 @@
   
 2. ### 영화리스트 슬라이드
 <a href="https://github.com/nolimits4web/swiper?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library"><img src="https://img.shields.io/badge/CDNJS-d96439?style=flat-square&logo=CDNJS&logoColor=white"/></a>
-#### 자바스크립트 라이브러리 swiper를 이용한 영화리스트의 스와이핑<br>반응형에 따라 보여지는 영화리스트의 갯수 조절
+#### - 자바스크립트 라이브러리 swiper를 이용한 영화리스트의 스와이핑<br>- 반응형에 따라 보여지는 영화리스트의 갯수 조절
 
 <img src="/readme-images/movie-list.JPG" width="70%" alt="영화리스트 스와이퍼"/>
 <pre>
@@ -73,7 +73,7 @@ function benefitBanner01(){
 
 5. ### 모달팝업
 <a href="https://github.com/carhartl/jquery-cookie?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library"><img src="https://img.shields.io/badge/CDNJS-d96439?style=flat-square&logo=CDNJS&logoColor=white"/></a>
-#### 모달팝업창 체크시 하루동안 보지않기<br>제이쿼리 쿠키 플러그인을 이용해 브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자에 도달하면 쿠키를 자동 삭제
+#### - 모달팝업창 체크시 하루동안 보지않기<br>- 제이쿼리 쿠키 플러그인을 이용해 브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자에 도달하면 쿠키를 자동 삭제
 <img src="/readme-images/popup.JPG" width="70%" alt="모달팝업창"/>
 <pre>
 <code>
