@@ -13,7 +13,7 @@
 <br><br>
   
 2. #### 자바스크립트 라이브러리 swiper를 이용한 영화리스트의 스와이핑
-<a href="https://github.com/carhartl/jquery-cookie?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library"><img src="https://img.shields.io/badge/CDNJS-d96439?style=flat-square&logo=CDNJS&logoColor=white"/></a>
+<a href="https://github.com/nolimits4web/swiper?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library"><img src="https://img.shields.io/badge/CDNJS-d96439?style=flat-square&logo=CDNJS&logoColor=white"/></a>
 ##### 반응형에 따라 보여지는 영화리스트의 갯수 조절
 <img src="/readme-images/movie-list.JPG" width="70%" alt="영화리스트 스와이퍼"/>
 <pre>
