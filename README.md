@@ -18,7 +18,7 @@ HTML, CSS, JavaScript, Jquery를 공부하면서 만든 반응형으로 만든 �
 ### 2. 메타 태그 등록
 #### 홈페이지의 설명, 키워드나 대표이미지, SNS 키워드 등 검색엔진최적화(SEO)에 도움되는 메타 설정
 ![image](https://user-images.githubusercontent.com/89722981/165946556-f954c6f2-c922-4a29-9828-4c132adf69dc.png)
-
+<br><br>
   
 ### 3. 영화리스트 슬라이드
 <a href="https://github.com/nolimits4web/swiper?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library"><img src="https://img.shields.io/badge/CDNJS-d96439?style=flat-square&logo=CDNJS&logoColor=white"/></a>
@@ -51,7 +51,8 @@ let swiper = new Swiper(".movie-list .swiper", {
 });
 </code>
 </pre>
-
+<br>
+  
 ### 4. Ajax를 이용하여 큐레이션의 상세정보 내용의 빠른 전환
 <img src="/readme-images/ajax.JPG" width="70%" alt="메가박스 ajax"/>
 <pre>
@@ -61,8 +62,9 @@ function cuLoad(idxNum){
 }
 </code>
 </pre>
+<br>
   
-### 4. 새로고침을 할 때마다 혜택부분의 배너의 랜덤한 변경
+### 5. 새로고침을 할 때마다 혜택부분의 배너의 랜덤한 변경
 <img src="/readme-images/megabox-benefit01.JPG" width="45%" alt="메가박스 베네핏1"/> <img src="/readme-images/megabox-benefit02.JPG" width="45%" alt="메가박스 베네핏2"/>
 <pre>
 <code>
@@ -77,8 +79,9 @@ function benefitBanner01(){
 }
 </code>
 </pre>
+<br>
 
-### 5. 모달팝업
+### 6. 모달팝업
 <a href="https://github.com/carhartl/jquery-cookie?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library"><img src="https://img.shields.io/badge/CDNJS-d96439?style=flat-square&logo=CDNJS&logoColor=white"/></a>
 #### - 모달팝업창 체크시 하루동안 보지않기<br>- 제이쿼리 쿠키 플러그인을 이용해 브라우저는 설정된 유효 일자까지 쿠키를 유지하다가, 해당 일자에 도달하면 쿠키를 자동 삭제
 <img src="/readme-images/popup.JPG" width="70%" alt="모달팝업창"/>
